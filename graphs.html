@@ -1,206 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Graphs | Dhruv Punia - Cricket Analysis</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
-
-  <style>
-    /* ========== COLORS — keep these the same across all 4 pages ========== */
-    :root {
-      --accent: #2563eb;
-      --accent-light: #eff6ff;
-      --text: #1e293b;
-      --muted: #64748b;
-      --bg: #f8fafc;
-      --card: #ffffff;
-      --border: #e2e8f0;
-    }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      font-family: 'DM Sans', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-    }
-
-    /* ===== NAVIGATION (same on every page) ===== */
-    nav {
-      background: var(--card);
-      border-bottom: 1px solid var(--border);
-      padding: 0 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-
-    .nav-brand {
-      font-family: 'DM Serif Display', serif;
-      font-size: 1.1rem;
-      color: var(--text);
-      text-decoration: none;
-      padding: 1rem 0;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      color: var(--muted);
-      font-size: 0.9rem;
-      font-weight: 500;
-      margin-left: 2rem;
-      padding: 0.25rem 0;
-      border-bottom: 2px solid transparent;
-      transition: color 0.2s, border-color 0.2s;
-    }
-
-    .nav-links a.active,
-    .nav-links a:hover {
-      color: var(--accent);
-      border-bottom-color: var(--accent);
-    }
-
-    /* ===== PAGE HEADER ===== */
-    .page-header {
-      background: var(--card);
-      border-bottom: 1px solid var(--border);
-      padding: 3rem 2rem 2.5rem;
-      text-align: center;
-    }
-
-    .page-header h1 {
-      font-family: 'DM Serif Display', serif;
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .page-header p {
-      color: var(--muted);
-      font-size: 1rem;
-      max-width: 500px;
-      margin: 0 auto;
-    }
-
-    /* ===== MAIN CONTENT ===== */
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 3rem 2rem;
-    }
-
-    /* ===== EACH GRAPH IS A "GRAPH CARD" ===== */
-    .graph-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      overflow: hidden;
-      margin-bottom: 2.5rem;
-    }
-
-    .graph-card img {
-      width: 100%;
-      display: block;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .graph-info {
-      padding: 1.5rem;
-    }
-
-    .graph-label {
-      font-size: 0.75rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--accent);
-      margin-bottom: 0.4rem;
-    }
-
-    .graph-info h2 {
-      font-family: 'DM Serif Display', serif;
-      font-size: 1.4rem;
-      margin-bottom: 0.75rem;
-    }
-
-    .graph-info p {
-      color: var(--muted);
-      font-size: 0.92rem;
-    }
-
-    /* ===== FOOTER ===== */
-    footer {
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.85rem;
-      color: var(--muted);
-      border-top: 1px solid var(--border);
-      margin-top: 2rem;
-    }
-  </style>
-</head>
-<body>
-
-  <nav>
-    <a class="nav-brand" href="index.html">Cricket Analysis Project</a>
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="graphs.html" class="active">Graphs</a>
-      <a href="sources.html">Sources</a>
-      <a href="about.html">About</a>
-    </div>
-  </nav>
-
-  <div class="page-header">
-    <h1>Statistical Visualizations</h1>
-    <p>Exploring the performance metrics of professional cricketers through data-driven insights.</p>
+<div class="graph-card">
+  <img src="Screenshot 2026-04-28 193810.png" alt="Batting Averages">
+  <div class="graph-info">
+    <h2>Does Survival Cause a Higher Average?</h2>
+    <p>This chart ranks the top 10 batsmen by their career average.</p>
   </div>
+</div>
 
-  <div class="container">
+<div class="graph-card">
+  <img src="Screenshot 2026-04-28 193854.png" alt="India vs Overseas">
+  <div class="graph-info">
+    <h2>Performance Comparison: India vs. Overseas</h2>
+    <p>This chart compares total runs between Indian and overseas players.</p>
+  </div>
+</div>
 
-    <div class="graph-card">
-      <img src="Screenshot 2026-04-28 193810.png" alt="Does Survival Cause a Higher Average?" />
-      <div class="graph-info">
-        <div class="graph-label">Averages & Survival</div>
-        <h2>Does Survival Cause a Higher Average?</h2>
-        <p>
-          This bar chart ranks the top 10 batsmen by their career batting average. It allows for an analysis of how "survival" at the crease (staying not-out) impacts a player's statistical standing. 
-        </p>
-      </div>
-    </div>
-
-    <div class="graph-card">
-      <img src="Screenshot 2026-04-28 193854.png" alt="Improvement Over Time - India vs Overseas" />
-      <div class="graph-info">
-        <div class="graph-label">Regional Comparison</div>
-        <h2>Performance Comparison: India vs. Overseas</h2>
-        <p>
-          This chart compares the total run accumulation of elite Indian batsmen against overseas players. It highlights geographical trends and provides insights into scoring outputs across different backgrounds.
-        </p>
-      </div>
-    </div>
-
-    <div class="graph-card">
-      <img src="Screenshot 2026-04-28 193914.png" alt="The Bad Thing: Increased Risk" />
-      <div class="graph-info">
-        <div class="graph-label">Risk vs. Reward</div>
-        <h2>The Bad Thing: Increased Risk</h2>
-        <p>
-          This scatter plot visualizes the relationship between total runs and the number of times a player was dismissed. The color gradient represents the batting average, showing that while run accumulation increases, so does the inherent risk of dismissal.
-        </p>
-      </div>
-    </div>
-
-  </div><footer>
-    Created by Dhruv Punia · Data4Change · CJCP · 2026
-  </footer>
-
-</body>
-</html>
+<div class="graph-card">
+  <img src="Screenshot 2026-04-28 193914.png" alt="Risk vs Reward">
+  <div class="graph-info">
+    <h2>The Bad Thing: Increased Risk</h2>
+    <p>This scatter plot shows the relationship between total runs and times out.</p>
+  </div>
+</div>
