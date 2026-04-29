@@ -4,8 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- ✏️ CHANGE THIS: Update the project title -->
-  <title>About</title>
+  <title>About | Dhruv Punia - Cricket Analysis</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -177,41 +176,6 @@
       color: var(--text);
     }
 
-    /* ===== PROCESS / STEPS SECTION ===== */
-    .process-step {
-      display: flex;
-      gap: 1rem;
-      margin-bottom: 1.5rem;
-      align-items: flex-start;
-    }
-
-    .step-dot {
-      min-width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      background: var(--accent-light);
-      border: 2px solid var(--accent);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.8rem;
-      font-weight: 600;
-      color: var(--accent);
-      flex-shrink: 0;
-      margin-top: 0.2rem;
-    }
-
-    .step-text h3 {
-      font-size: 1rem;
-      font-weight: 600;
-      margin-bottom: 0.25rem;
-    }
-
-    .step-text p {
-      font-size: 0.9rem;
-      color: var(--muted);
-    }
-
     /* ===== SECTION HEADING ===== */
     .section-heading {
       font-family: 'DM Serif Display', serif;
@@ -245,47 +209,35 @@
 </head>
 <body>
 
-  <!-- ===== NAVIGATION ===== -->
   <nav>
-    <!-- ✏️ CHANGE: Short project name -->
-    <a class="nav-brand" href="index.html">Capstone Project</a>
+    <a class="nav-brand" href="index.html">Cricket Analysis Project</a>
     <div class="nav-links">
       <a href="index.html">Home</a>
       <a href="graphs.html">Graphs</a>
       <a href="sources.html">Sources</a>
-      <a href="about.html" class="active">About</a>  <!-- active = current page -->
+      <a href="about.html" class="active">About</a>
     </div>
   </nav>
 
-  <!-- ===== PAGE HEADER ===== -->
   <div class="page-header">
-    <h1>About This Project</h1>
-    <p>Who made it, why it was made, and acknowledgements.</p>
+    <h1>The Survival Paradox: A Quantitative Analysis of Risk, Reward, and Run-Scoring in Professional Cricket</h1>
+    <p>Created by Dhruv Punia, this project explores the statistical balance of risk and reward in professional batting, inspired by his love for watching cricket with his family.</p>
   </div>
 
   <div class="container">
 
-    <!-- ─── STUDENT PROFILE ─── -->
     <div class="profile-card">
-      <!-- ✏️ CHANGE: Replace "JS" with your actual initials -->
-      <div class="avatar">JS</div>
+      <div class="avatar">DP</div>
       <div class="profile-info">
-        <!-- ✏️ CHANGE: Your full name -->
-        <h2>Jane Smith</h2>
-        <!-- ✏️ CHANGE: Your grade -->
-        <div class="role">11th Grade · Data4Change</div>
-        <!-- ✏️ CHANGE: Write 2–3 sentences about yourself (optional but nice!) -->
+        <h2>Dhruv Punia</h2>
+        <div class="role">8th Grade · Central Jersey College Prep (CJCP)</div>
         <p>
-          I'm a junior interested in data science and public health. I created this
-          project as part of the Data4Change course, exploring how technology
-          habits relate to academic performance among students my age.
+          I am an 8th grader who is interested in computer science and data science. I enjoy learning more about how data can be used to understand performance patterns in sports like cricket.
         </p>
       </div>
     </div>
 
-    <!-- ─── PROJECT INFO GRID ─── -->
     <div class="info-grid">
-      <!-- ✏️ CHANGE: Fill in the actual details for each box -->
       <div class="info-card">
         <div class="label">Course</div>
         <div class="value">Data4Change</div>
@@ -296,36 +248,22 @@
       </div>
       <div class="info-card">
         <div class="label">Date Completed</div>
-        <!-- ✏️ CHANGE: When you finished the project -->
-        <div class="value">May 3, 2026</div>
+        <div class="value">April 28, 2026</div>
       </div>
     </div>
 
-<!-- ─── WHY ─── -->
     <h2 class="section-heading" style="margin-top: 2.5rem;">Why Did You Choose This Project</h2>
     <div class="reflection">
-      I chose this project because income inequality is something that affects millions of
-      people yet is often misunderstood. I wanted to explore what factors — like education,
-      age, and occupation — actually influence whether someone earns above or below a certain
-      threshold. Data felt like the best way to cut through assumptions and look at the
-      patterns objectively. This topic also felt personally relevant, as conversations about
-      economic opportunity come up a lot in my community, and I wanted to back those
-      conversations with real numbers.
+      I chose this project because the debate over what makes a great batsman is something that every fan has an opinion on, yet it is often misunderstood. I wanted to explore what factors—like batting average, strike rate, and survival at the crease—actually influence a player's total run production. Using data felt like the best way to cut through assumptions and look at these performance patterns objectively. This topic also feels personally relevant, as I’ve always enjoyed watching cricket with my family, and I wanted to back our conversations about who the best players really are with real numbers.
     </div>
 
-    <!-- ─── ACKNOWLEDGEMENTS (optional) ─── -->
     <h2 class="section-heading">Acknowledgements</h2>
     <p style="color: var(--muted); font-size: 0.92rem; line-height: 2;">
-      Thank you to <a href="https://www.code4change.co/" target="_blank">Code4Change</a> and the entire 
-      team for the guidance and support throughout this project.
+      This project was developed by Dhruv Punia to explore the statistical balance of risk and reward in professional batting, inspired by my passion for watching cricket with my family. I would like to acknowledge the use of the <code>most_runs_average_strikerate.csv</code> dataset. Thank you to <a href="https://www.code4change.co/" target="_blank">Code4Change</a> and the entire team for the guidance and support throughout this project.
     </p>
 
-  </div><!-- end .container -->
-
-  <!-- ===== FOOTER ===== -->
-  <footer>
-    <!-- ✏️ CHANGE: Your name, class, school, year -->
-    Created by Jane Smith · Data4Change · 2026
+  </div><footer>
+    Created by Dhruv Punia · Data4Change · CJCP · 2026
   </footer>
 
 </body>
