@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sources · Dhruv Punia - Cricket Analysis</title>
+  <title>Sources | Dhruv Punia - Cricket Analysis</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -59,8 +59,7 @@
       transition: color 0.2s, border-color 0.2s;
     }
 
-    .nav-links a.active,
-    .nav-links a:hover {
+    .nav-links a.active {
       color: var(--accent);
       border-bottom-color: var(--accent);
     }
@@ -75,14 +74,6 @@
     .page-header h1 {
       font-family: 'DM Serif Display', serif;
       font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .page-header p {
-      color: var(--muted);
-      font-size: 1rem;
-      max-width: 500px;
-      margin: 0 auto;
     }
 
     .container {
@@ -91,20 +82,11 @@
       padding: 3rem 2rem;
     }
 
-    .section-heading {
-      font-family: 'DM Serif Display', serif;
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 2px solid var(--accent-light);
-    }
-
     .source-card {
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 10px;
-      padding: 1.25rem 1.5rem;
-      margin-bottom: 1rem;
+      padding: 1.5rem;
       display: flex;
       gap: 1.25rem;
       align-items: flex-start;
@@ -121,45 +103,22 @@
       font-size: 1.2rem;
     }
 
-    .source-content { flex: 1; }
-
-    .source-type {
-      font-size: 0.72rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--accent);
-      margin-bottom: 0.2rem;
-    }
-
     .source-content h3 {
-      font-size: 1rem;
-      font-weight: 600;
-      margin-bottom: 0.25rem;
-    }
-
-    .source-content p {
-      font-size: 0.88rem;
-      color: var(--muted);
+      font-size: 1.1rem;
       margin-bottom: 0.5rem;
     }
 
     .source-content a {
-      font-size: 0.85rem;
       color: var(--accent);
       text-decoration: none;
       word-break: break-all;
     }
 
-    .source-content a:hover { text-decoration: underline; }
-
     footer {
       text-align: center;
       padding: 2rem;
-      font-size: 0.85rem;
       color: var(--muted);
       border-top: 1px solid var(--border);
-      margin-top: 2rem;
     }
   </style>
 </head>
@@ -170,4 +129,33 @@
     <div class="nav-links">
       <a href="index.html">Home</a>
       <a href="graphs.html">Graphs</a>
-      <a href="sources.
+      <a href="sources.html" class="active">Sources</a>
+      <a href="about.html">About</a>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <h1>Data Sources</h1>
+  </div>
+
+  <div class="container">
+    <h2 style="margin-bottom: 1.5rem;">📊 Dataset Information</h2>
+    <div class="source-card">
+      <div class="source-icon">📁</div>
+      <div class="source-content">
+        <h3>Most Runs, Average, and Strike Rate</h3>
+        <p>The primary data for this project is the <strong>most_runs_average_strikerate.csv</strong> file. This dataset contains career performance statistics for professional batsmen, including total runs, batting averages, and strike rates.</p>
+        <p style="margin-top: 10px;"><strong>Link to Google Sheets:</strong></p>
+        <a href="https://docs.google.com/spreadsheets/d/1oByLAZv656zulDSVOnFpahEhZSm6K2YEBVke6Ms9Jc4/edit" target="_blank">
+          https://docs.google.com/spreadsheets/d/1oByLAZv656zulDSVOnFpahEhZSm6K2YEBVke6Ms9Jc4/edit →
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Created by Dhruv Punia · Data4Change · CJCP · 2026
+  </footer>
+
+</body>
+</html>
