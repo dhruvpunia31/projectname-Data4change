@@ -1,255 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<div class="card">
+  <h2 class="section-heading">The Big Question</h2>
+  <p>
+    Cricket fans love to argue about who is the best player. Some say it is the person who stays in the game for a long time. Others say it is the person who scores runs very fast. Many people think staying in the game longer is always better. But does staying in longer actually make it more likely that you will get out? This project looks at total runs, how many times a player got out, and their averages to see what the real numbers say.
+  </p>
+</div>
 
-  <title>The Survival Paradox | Cricket Analysis</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
-
-  <style>
-    /* ========== COLORS ========== */
-    :root {
-      --accent: #2563eb;
-      --accent-light: #eff6ff;
-      --text: #1e293b;
-      --muted: #64748b;
-      --bg: #f8fafc;
-      --card: #ffffff;
-      --border: #e2e8f0;
-    }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      font-family: 'DM Sans', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-    }
-
-    /* ===== TOP NAVIGATION BAR ===== */
-    nav {
-      background: var(--card);
-      border-bottom: 1px solid var(--border);
-      padding: 0 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-
-    .nav-brand {
-      font-family: 'DM Serif Display', serif;
-      font-size: 1.1rem;
-      color: var(--text);
-      text-decoration: none;
-      padding: 1rem 0;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      color: var(--muted);
-      font-size: 0.9rem;
-      font-weight: 500;
-      margin-left: 2rem;
-      padding: 0.25rem 0;
-      border-bottom: 2px solid transparent;
-      transition: color 0.2s, border-color 0.2s;
-    }
-
-    .nav-links a.active,
-    .nav-links a:hover {
-      color: var(--accent);
-      border-bottom-color: var(--accent);
-    }
-
-    /* ===== HERO SECTION ===== */
-    .hero {
-      background: linear-gradient(135deg, var(--accent-light) 0%, var(--card) 100%);
-      padding: 5rem 2rem 4rem;
-      text-align: center;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .hero-tag {
-      display: inline-block;
-      background: var(--accent);
-      color: white;
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      padding: 0.3rem 0.9rem;
-      border-radius: 999px;
-      margin-bottom: 1.5rem;
-    }
-
-    .hero h1 {
-      font-family: 'DM Serif Display', serif;
-      font-size: clamp(2rem, 5vw, 3.5rem);
-      line-height: 1.2;
-      max-width: 800px;
-      margin: 0 auto 1.25rem;
-      color: var(--text);
-    }
-
-    .hero p {
-      font-size: 1.1rem;
-      color: var(--muted);
-      max-width: 600px;
-      margin: 0 auto 2rem;
-    }
-
-    .hero-btn {
-      display: inline-block;
-      background: var(--accent);
-      color: white;
-      text-decoration: none;
-      padding: 0.75rem 2rem;
-      border-radius: 8px;
-      font-weight: 600;
-      font-size: 0.95rem;
-      transition: opacity 0.2s;
-    }
-
-    .hero-btn:hover { opacity: 0.85; }
-
-    /* ===== MAIN CONTENT WRAPPER ===== */
-    .container {
-      max-width: 860px;
-      margin: 0 auto;
-      padding: 3rem 2rem;
-    }
-
-    .section-heading {
-      font-family: 'DM Serif Display', serif;
-      font-size: 1.75rem;
-      margin-bottom: 1rem;
-      color: var(--text);
-    }
-
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 2rem;
-      margin-bottom: 2rem;
-    }
-
-    .findings-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1rem;
-      margin-top: 1.5rem;
-    }
-
-    .finding-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-left: 4px solid var(--accent);
-      border-radius: 8px;
-      padding: 1.25rem;
-    }
-
-    .finding-card h3 {
-      font-size: 0.9rem;
-      font-weight: 600;
-      margin-bottom: 0.4rem;
-      color: var(--accent);
-    }
-
-    .finding-card p {
-      font-size: 0.88rem;
-      color: var(--muted);
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.85rem;
-      color: var(--muted);
-      border-top: 1px solid var(--border);
-      margin-top: 2rem;
-    }
-  </style>
-</head>
-<body>
-
-  <nav>
-    <a class="nav-brand" href="index.html">Cricket Analysis</a>
-    <div class="nav-links">
-      <a href="index.html" class="active">Home</a>
-      <a href="graphs.html">Graphs</a>
-      <a href="sources.html">Sources</a>
-      <a href="about.html">About</a>
-    </div>
-  </nav>
-
-  <div class="hero">
-    <span class="hero-tag">Data4Change Final Project</span>
-
-    <h1>The Survival Paradox: Risk, Reward, and Run-Scoring</h1>
-
-    <p>
-      An objective analysis of how batting average, strike rate, and survival 
-      at the crease define greatness in professional cricket.
-    </p>
-
-    <a class="hero-btn" href="graphs.html">View Visualizations →</a>
+<h2 class="section-heading">Questions I Researched</h2>
+<div class="findings-grid">
+  <div class="finding-card">
+    <h3>Question 1</h3>
+    <p>If a player stays in the game for a long time, does their career average actually go up?</p>
   </div>
-
-  <div class="container">
-    
-    <div class="card">
-      <h2 class="section-heading">Problem Statement</h2>
-      <p>
-        In the world of cricket, fans constantly debate what makes a batsman truly "elite." 
-        Is it the ability to stay at the crease for long periods, or the speed at which 
-        runs are scored? Many assume that higher survival leads to better performance, 
-        but does the data show an increased risk for those who stay in longer? This project 
-        investigates the correlation between total runs, times out, and batting averages 
-        to cut through fan assumptions with hard numbers.
-      </p>
-    </div>
-
-    <h2 class="section-heading">Research Questions</h2>
-    <div class="findings-grid">
-      <div class="finding-card">
-        <h3>Question 1</h3>
-        <p>Does a higher survival rate at the crease actually result in a higher career batting average?</p>
-      </div>
-      <div class="finding-card">
-        <h3>Question 2</h3>
-        <p>How do total runs accumulated correlate with the number of times a player is dismissed?</p>
-      </div>
-      <div class="finding-card">
-        <h3>Question 3</h3>
-        <p>Are there measurable differences in run accumulation between Indian and Overseas players?</p>
-      </div>
-    </div>
-
-    <div class="card" style="margin-top: 2rem;">
-      <h2 class="section-heading">Conclusion</h2>
-      <p>
-        The analysis reveals a "Survival Paradox": while scoring more runs is the goal, 
-        doing so inevitably increases the cumulative risk of dismissal. However, elite 
-        players are distinguished by their ability to maintain high averages even as 
-        their "Times Out" count rises. Furthermore, geographical data suggests that 
-        Indian players in this dataset show strong domestic consistency, proving that 
-        environment is a key factor in run production alongside individual skill.
-      </p>
-    </div>
-
+  <div class="finding-card">
+    <h3>Question 2</h3>
+    <p>Is there a link between the total runs a player makes and the number of times they get out?</p>
   </div>
+  <div class="finding-card">
+    <h3>Question 3</h3>
+    <p>Is there a big difference in scores between players from India and players from other countries?</p>
+  </div>
+</div>
 
-  <footer>
-    Created by Dhruv Punia · Data4Change · 2026
-  </footer>
-
-</body>
-</html>
+<div class="card" style="margin-top: 2rem;">
+  <h2 class="section-heading">What I Found</h2>
+  <p>
+    The data shows that scoring more runs is good, but it also makes you more likely to get out. This is the "Survival Paradox." The very best players are special because they keep a high average even when they get out a lot. I also found that Indian players in this data are very good at scoring at home. This shows that where you play is just as important as how well you play.
+  </p>
+</div>
