@@ -4,8 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- ✏️ CHANGE THIS: Update the project title -->
-  <title>Graphs · My Data Capstone Project</title>
+  <title>Graphs | Dhruv Punia - Cricket Analysis</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -63,7 +62,6 @@
       transition: color 0.2s, border-color 0.2s;
     }
 
-    /* NOTE: "active" is on "Graphs" link on this page */
     .nav-links a.active,
     .nav-links a:hover {
       color: var(--accent);
@@ -150,78 +148,56 @@
 </head>
 <body>
 
-  <!-- ===== NAVIGATION (same on every page — only change "active" class) ===== -->
   <nav>
-    <!-- ✏️ CHANGE: Short project name -->
-    <a class="nav-brand" href="index.html">Capstone Project</a>
+    <a class="nav-brand" href="index.html">Cricket Analysis Project</a>
     <div class="nav-links">
       <a href="index.html">Home</a>
-      <a href="graphs.html" class="active">Graphs</a>  <!-- active = current page -->
+      <a href="graphs.html" class="active">Graphs</a>
       <a href="sources.html">Sources</a>
       <a href="about.html">About</a>
     </div>
   </nav>
 
-  <!-- ===== PAGE HEADER ===== -->
   <div class="page-header">
     <h1>Graphs</h1>
   </div>
 
-  <!-- ===== GRAPHS ===== -->
   <div class="container">
 
-    <!-- ─── GRAPH 1 ─── -->
     <div class="graph-card">
-      <!-- ✏️ CHANGE: Replace with your actual image file path -->
-      <!-- Put your images in a folder called "graphs" inside your project folder -->
-      <img src="Graphs/bargraph_1.png" alt="Top 10 Batsmen by Average" />
+      <img src="bargraph_1.png" alt="Top 10 Batsmen by Average" />
       <div class="graph-info">
-        <!-- ✏️ CHANGE: Graph title -->
         <h2>Does Survival Cause a Higher Average?</h2>
-        <!-- ✏️ CHANGE: Explain what this graph shows and the answer to the question it corresponds to -->
         <p>
-          This bar chart ranks the top 10 batsmen by their career average. 
-          By examining elite performers like Iqbal Abdulla and J Bairstow, we can analyze the correlation 
-          between "survival" at the crease and a high statistical average.
+          This chart shows the 10 players with the best averages.
+          By looking at top players like Iqbal Abdulla and J Bairstow, we can see if staying at the crease helps a player's score.
         </p>
       </div>
     </div>
 
-    <!-- ─── GRAPH 2 ─── -->
     <div class="graph-card">
-      <!-- ✏️ CHANGE: Replace with your second graph image -->
-      <img src="Graphs/bargraph_2.png" alt="Improvement Over Time - India vs Overseas" />
+      <img src="bargraph_2.png" alt="Improvement Over Time - India vs Overseas" />
       <div class="graph-info">
-        <!-- ✏️ CHANGE: Graph title -->
         <h2>Performance Comparison: India vs. Overseas</h2>
-        <!-- ✏️ CHANGE: Explain what this graph shows and the answer to the question it corresponds t -->
         <p>
-          This chart compares the total run accumulation of elite Indian batsmen against overseas players. 
-          The data shows that Indian players in this group have collectively amassed nearly 25,000 runs.
+          This chart compares total runs for elite Indian and overseas players.
+          The data shows that Indian players in this group have scored almost 25,000 runs in total.
         </p>
       </div>
     </div>
 
-    <!-- ─── GRAPH 3 ─── -->
     <div class="graph-card">
-      <!-- ✏️ CHANGE: Replace with your third graph image -->
-      <img src="Graphs/scatterplot.png" alt="Box plot comparing GPA distributions" />
+      <img src="scatterplot.png" alt="Scatter plot of Total Runs vs Times Out" />
       <div class="graph-info">
-        <!-- ✏️ CHANGE: Graph title -->
         <h2>The Bad Thing: Increased Risk</h2>
-        <!-- ✏️ CHANGE: Explain what this graph shows and the answer to the question it corresponds t -->
         <p>
-          This scatter plot visualizes the relationship between total runs and the number of times a 
-          player was dismissed. The color gradient represents the batting average, showing that while 
-		  run accumulation increases, so does the risk of dismissal.
+          This plot shows the link between total runs and how often a player gets out.
+          The colors show batting averages. It shows that as players score more runs, the risk of getting out also goes up.
         </p>
       </div>
     </div>
 
-  </div><!-- end .container -->
-
-  <!-- ===== FOOTER ===== -->
-  <footer>
+  </div><footer>
     Created by Dhruv Punia · Data4Change · 2026
   </footer>
 
