@@ -10,15 +10,15 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
 
   <style>
-    /* ========== COLORS — change these to match your style ========== */
+    /* ========== COLORS ========== */
     :root {
-      --accent: #2563eb;       /* main color used for links, highlights */
-      --accent-light: #eff6ff; /* light version used for backgrounds */
-      --text: #1e293b;         /* main text color */
-      --muted: #64748b;        /* lighter text for captions/labels */
-      --bg: #f8fafc;           /* page background */
-      --card: #ffffff;         /* card/section background */
-      --border: #e2e8f0;       /* borders and dividers */
+      --accent: #2563eb;
+      --accent-light: #eff6ff;
+      --text: #1e293b;
+      --muted: #64748b;
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --border: #e2e8f0;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -30,7 +30,6 @@
       line-height: 1.7;
     }
 
-    /* ===== TOP NAVIGATION BAR ===== */
     nav {
       background: var(--card);
       border-bottom: 1px solid var(--border);
@@ -62,14 +61,12 @@
       transition: color 0.2s, border-color 0.2s;
     }
 
-    /* The "active" class highlights the current page link */
     .nav-links a.active,
     .nav-links a:hover {
       color: var(--accent);
       border-bottom-color: var(--accent);
     }
 
-    /* ===== HERO SECTION (big intro at the top of home page) ===== */
     .hero {
       background: linear-gradient(135deg, var(--accent-light) 0%, var(--card) 100%);
       padding: 5rem 2rem 4rem;
@@ -94,7 +91,7 @@
       font-family: 'DM Serif Display', serif;
       font-size: clamp(2rem, 5vw, 3.5rem);
       line-height: 1.2;
-      max-width: 700px;
+      max-width: 800px;
       margin: 0 auto 1.25rem;
       color: var(--text);
     }
@@ -102,7 +99,7 @@
     .hero p {
       font-size: 1.1rem;
       color: var(--muted);
-      max-width: 560px;
+      max-width: 600px;
       margin: 0 auto 2rem;
     }
 
@@ -120,14 +117,12 @@
 
     .hero-btn:hover { opacity: 0.85; }
 
-    /* ===== MAIN CONTENT WRAPPER ===== */
     .container {
       max-width: 860px;
       margin: 0 auto;
       padding: 3rem 2rem;
     }
 
-    /* ===== SECTION HEADING STYLE ===== */
     .section-heading {
       font-family: 'DM Serif Display', serif;
       font-size: 1.75rem;
@@ -135,7 +130,6 @@
       color: var(--text);
     }
 
-    /* ===== CARD (white box with shadow) ===== */
     .card {
       background: var(--card);
       border: 1px solid var(--border);
@@ -144,37 +138,6 @@
       margin-bottom: 2rem;
     }
 
-    /* ===== STAT BOXES (shows key numbers at a glance) ===== */
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 1rem;
-      margin: 2rem 0;
-    }
-
-    .stat-box {
-      background: var(--accent-light);
-      border-radius: 10px;
-      padding: 1.25rem 1.5rem;
-      text-align: center;
-    }
-
-    .stat-number {
-      font-family: 'DM Serif Display', serif;
-      font-size: 2rem;
-      color: var(--accent);
-      display: block;
-    }
-
-    .stat-label {
-      font-size: 0.8rem;
-      color: var(--muted);
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-
-    /* ===== FINDING CARDS (key takeaways) ===== */
     .findings-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -202,15 +165,6 @@
       color: var(--muted);
     }
 
-    /* ===== FEATURED IMAGE ===== */
-    .featured-image {
-      width: 100%;
-      border-radius: 10px;
-      border: 1px solid var(--border);
-      margin: 1.5rem 0;
-    }
-
-    /* ===== FOOTER ===== */
     footer {
       text-align: center;
       padding: 2rem;
@@ -235,13 +189,8 @@
 
   <div class="hero">
     <span class="hero-tag">Data4Change Final Project</span>
-
     <h1>The Survival Paradox</h1>
-
-    <p>
-      Using real data to find out how cricket players score runs and handle the risk of getting out.
-    </p>
-
+    <p>Using real data to find out how cricket players score runs and handle the risk of getting out.</p>
     <a class="hero-btn" href="graphs.html">View Graphs →</a>
   </div>
 
@@ -262,11 +211,11 @@
       </div>
       <div class="finding-card">
         <h3>Question 2</h3>
-        <p>Is there a link between the total runs a player makes and the number of times they get out?</p>
+        <p>Who scores more runs: Indian players or players from other countries, and why does home advantage matter?</p>
       </div>
       <div class="finding-card">
         <h3>Question 3</h3>
-        <p>Is there a big difference in scores between players from India and players from other countries?</p>
+        <p>Is there a link between the total runs a player makes and the risk of them getting out?</p>
       </div>
     </div>
 
@@ -277,7 +226,9 @@
       </p>
     </div>
 
-  </div><footer>
+  </div>
+
+  <footer>
     Created by Dhruv Punia · Data4Change · CJCP · 2026
   </footer>
 
